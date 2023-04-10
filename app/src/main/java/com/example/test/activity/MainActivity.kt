@@ -43,6 +43,7 @@ class MainActivity : BaseActivity() {
 //            }
 //        }
         setNavigationView()
+        mainBinding.bottomNavigation.menu.getItem(0).isChecked = true
         initViewPage()
 
         //getFeed()
@@ -50,6 +51,7 @@ class MainActivity : BaseActivity() {
 
     private fun setNavigationView() {
         mainBinding.bottomNavigation.setOnItemSelectedListener { item ->
+            menuItem = item
             when (item.itemId) {
                 R.id.explore -> mainBinding.vp.currentItem = 0
                 R.id.profile -> mainBinding.vp.currentItem = 1
