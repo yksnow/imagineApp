@@ -18,7 +18,6 @@ class ProfileFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         profileBinding = FragmentProfileBinding.inflate(inflater, container, false)
-        val rootView: View = profileBinding.root
-        return rootView
+        return profileBinding.root
     }
 }
