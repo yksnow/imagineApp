@@ -1,14 +1,22 @@
-package com.example.test.activity
+package com.example.test.utils
 
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.Toast
 
-open class BaseActivity: AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState,)
+/**
+ * Created by yaoletian on 2023/4/10.
+ */
+object MyUtils {
+
+    fun showShot(context: Context?, msg: String?) {
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+    }
+
+    fun showLong(context: Context?, msg: String?) {
+        Toast.makeText(context, msg, Toast.LENGTH_LONG).show()
     }
 
     /**
@@ -18,7 +26,7 @@ open class BaseActivity: AppCompatActivity() {
      * @param [data]         携带的数据  可为空
      * @param [requestCode]  请求 code 当不为0时，startActivityForResult
      */
-    public inline fun <reified T : Activity> Context.startActivity1(
+    inline fun <reified T : Activity> Context.startActivity(
         data: Bundle? = null,
         requestCode: Int? = 0
     ) {
@@ -33,4 +41,6 @@ open class BaseActivity: AppCompatActivity() {
         }
 
     }
+
+
 }

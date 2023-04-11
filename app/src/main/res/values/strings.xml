@@ -1,3 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
     <string name="app_name">Test</string>
+    <string name="server_client_id">217364888066-2gn14t4p9mfbue0jqub1limus7qgdsei.apps.googleusercontent.com</string>
 </resources>

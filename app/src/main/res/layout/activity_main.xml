@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".activity.MainActivity">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_feed"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone" />
-
+    android:background="@color/white">
     <RelativeLayout
         android:id="@+id/fl_bottom"
         android:layout_width="match_parent"
@@ -30,10 +21,12 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vp"
+        android:overScrollMode="never"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/fl_bottom" />
     <ImageView
+        android:id="@+id/iv_login"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
@@ -41,3 +34,6 @@
         android:layout_marginBottom="5dp"
         android:background="@mipmap/ic_add" />
 </RelativeLayout>
+
+
+</layout>
